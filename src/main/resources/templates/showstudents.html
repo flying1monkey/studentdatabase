@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <th:block th:replace="base :: headInfo"/>
+
+    <title>Login</title>
+</head>
+<body>
+<th:block th:replace="base :: navigationbar"></th:block>
+<header class="masthead">
+    <div class="header-content">
+        <div class="header-content-inner">
+            <div class="container">
+                <h2>Students</h2>
+                <table border="1">
+                    <tr>
+                        <th>First name</th>
+                        <th>Last name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>School</th>
+                    </tr>
+                    <tr th:each="student : ${students}">
+                        <td th:text="${student.firstName}"></td>
+                        <td th:text="${student.lastName}"></td>
+                        <td th:text="${student.email}"></td>
+                        <td th:text="${student.phone}"></td>
+                        <td th:text="${student.schoolName}"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</header>
+<th:block th:replace="base :: scripts"></th:block>
+
+</body>
+</html>

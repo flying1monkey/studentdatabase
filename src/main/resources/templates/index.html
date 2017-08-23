@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+  <th:block th:replace="base :: headInfo"/>
+
+  <title>Welcome!</title>
+</head>
+<body>
+<th:block th:replace="base :: navigationbar"></th:block>
+
+<header class="masthead">
+  <div class="header-content">
+    <div class="header-content-inner">
+      <h1>Welcome to the student database!</h1>
+      <hr/>
+      <p>How about doing what you probably came here for?</p>
+      <a class="btn btn-primary btn-xl js-scroll-trigger" th:href="@{/addstudent.html}">Add a student</a>
+    </div>
+  </div>
+</header>
+<th:block th:replace="base :: scripts"></th:block>
+
+</body>
+</html>
